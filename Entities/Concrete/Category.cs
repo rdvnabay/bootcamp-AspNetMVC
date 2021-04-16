@@ -9,6 +9,10 @@ namespace Entities.Concrete
 {
     public class Category
     {
+        public Category()
+        {
+            Headings = new List<Heading>();
+        }
         [Key]
         public int Id { get; set; }
         [StringLength(50)]
@@ -18,6 +22,5 @@ namespace Entities.Concrete
         public bool Status { get; set; }
 
         public ICollection<Heading> Headings { get; set; }
-        //public List<Heading> Headings { get; set; }
     }
 }

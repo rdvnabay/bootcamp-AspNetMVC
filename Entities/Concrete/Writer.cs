@@ -9,6 +9,11 @@ namespace Entities.Concrete
 {
     public class Writer
     {
+        public Writer()
+        {
+            Contents = new List<Content>();
+            Headings = new List<Heading>();
+        }
         [Key]
         public int Id { get; set; }
         [StringLength(20)]

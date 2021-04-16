@@ -11,14 +11,15 @@ namespace Entities.Concrete
     {
         [Key]
         public int Id { get; set; }
+        public int HeadingId { get; set; }
+        public int? WriterId { get; set; }
+
         [StringLength(100)]
         public string Value { get; set; }
         public DateTime CreatedDate { get; set; }
 
-        public int HeadingId { get; set; }
+   
         public Heading Heading { get; set; }
-
-        public int WriterId { get; set; }
         public Writer Writer { get; set; }
     }
 }
