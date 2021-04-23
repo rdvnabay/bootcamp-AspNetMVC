@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Core.Entities;
+using System;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Entities.Concrete
 {
-    public class Content
+    public class Content:IEntity
     {
         [Key]
         public int Id { get; set; }
