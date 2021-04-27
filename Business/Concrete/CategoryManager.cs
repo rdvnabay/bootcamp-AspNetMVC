@@ -8,14 +8,16 @@ namespace Business.Concrete
 {
     public class CategoryManager : ICategoryService
     {
-        ICategoryDal _categoryDal;
-        public CategoryManager(ICategoryDal categoryDal)
-        {
-            _categoryDal = categoryDal;
-        }
+        EfCategoryDal efCategoryDal = new EfCategoryDal();
         public List<Category> GetAll()
         {
-            return _categoryDal.GetAll();
+            return efCategoryDal.GetAll();
         }
     }
+    //{
+    //    ICategoryDal _categoryDal;
+    //    public CategoryManager(ICategoryDal categoryDal)
+    //    {
+    //        _categoryDal = categoryDal;
+    //    }
 }
