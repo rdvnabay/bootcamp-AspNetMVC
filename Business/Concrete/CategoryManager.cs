@@ -2,6 +2,7 @@
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
+using System;
 using System.Collections.Generic;
 
 namespace Business.Concrete
@@ -13,11 +14,10 @@ namespace Business.Concrete
         {
             return efCategoryDal.GetAll();
         }
+
+        public void Add(Category category)
+        {
+            efCategoryDal.Add(category);
+        }
     }
-    //{
-    //    ICategoryDal _categoryDal;
-    //    public CategoryManager(ICategoryDal categoryDal)
-    //    {
-    //        _categoryDal = categoryDal;
-    //    }
 }
