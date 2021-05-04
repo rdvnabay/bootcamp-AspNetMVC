@@ -1,4 +1,4 @@
-﻿
+﻿@model Entities.Concrete.Category
 @{
     Layout = null;
 }
@@ -12,14 +12,34 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 </head>
 <body>
-    <div> 
-        <form method="post">
+    <div>
+        @using (Html.BeginForm("Add", "Category", FormMethod.Post))
+        {
+            <div class="form-group">
+                @Html.LabelFor(c => c.Name)
+                @Html.TextBoxFor(c => c.Name)
+                @Html.ValidationMessageFor(c => c.Name)
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(c => c.Description)
+                @Html.TextBoxFor(c => c.Description)
+                @Html.ValidationMessageFor(c => c.Description)
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-success">Kaydet</button>
+            </div>
+
+        }
+        @*<form method="post">
             <div class="form-group">
                 <input type="text" name="Name" placeholder="Name" class="form-control" />
+                <div class="validation-summary"></div>
                 <input type="text" name="Description" placeholder="Description" class="form-control" />
                 <button class="btn btn-primary">Kategori Ekle</button>
             </div>
-        </form>
+        </form>*@
     </div>
 </body>
 </html>

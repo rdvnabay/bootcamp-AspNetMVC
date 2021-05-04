@@ -9,15 +9,19 @@ namespace Business.Concrete
 {
     public class CategoryManager : ICategoryService
     {
-        EfCategoryDal efCategoryDal = new EfCategoryDal();
+        private ICategoryDal _categoryDal;
+        public CategoryManager(ICategoryDal categoryDal)
+        {
+            _categoryDal = categoryDal;
+        }
         public List<Category> GetAll()
         {
-            return efCategoryDal.GetAll();
+            return _categoryDal.GetAll();
         }
 
         public void Add(Category category)
         {
-            efCategoryDal.Add(category);
+            _categoryDal.Add(category);
         }
     }
 }
