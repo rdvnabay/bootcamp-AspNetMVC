@@ -11,7 +11,7 @@
     <!-- Main content -->
     <div class="content">
         <div class="container-fluid">
-            <a href="#" class="btn btn-sm btn-outline-info">Kategori Ekle</a>
+            <a href="/AdminPanel/Category/Add" class="btn btn-sm btn-outline-info">Kategori Ekle</a>
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -30,10 +30,10 @@
                             <td>@category.Name</td>
                             <td></td>
                             <td>
-                                <a href="#" class="btn btn-sm btn-outline-warning">Düzenle</a>
+                                <a href="/AdminPanel/Category/Edit/@category.Id" class="btn btn-sm btn-outline-warning">Düzenle</a>
                             </td>
                             <td>
-                                <a href="#" class="btn btn-sm btn-outline-danger">Sil</a>
+                                <a href="/AdminPanel/Category/Delete/@category.Id" class="btn btn-sm btn-outline-danger">Sil</a>
                             </td>
                         </tr>
                     }

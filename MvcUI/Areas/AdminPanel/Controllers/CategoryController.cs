@@ -14,13 +14,8 @@ namespace MvcUI.Areas.AdminPanel.Controllers
     public class CategoryController : Controller
     {
         CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
-        // GET: AdminPanel/Category
-        public ActionResult List()
-        {
-            var result = categoryManager.GetAll(); ;
-            return View(result);
-        }
 
+        //Methods
         public ActionResult Add()
         {
             return View();
@@ -44,6 +39,32 @@ namespace MvcUI.Areas.AdminPanel.Controllers
                 }
             }
             return View(category);
+        }
+
+        public ActionResult Delete(int id)
+        {
+            var data = categoryManager.GetById(id);
+            categoryManager.Delete(data);
+            return RedirectToAction("List");
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var model = categoryManager.GetById(id);
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(Category category)
+        {
+            categoryManager.Update(category);
+            return RedirectToAction("List");
+        }
+
+        public ActionResult List()
+        {
+            var result = categoryManager.GetAll(); ;
+            return View(result);
         }
     }
 }

@@ -2006,6 +2006,7 @@
     <Content Include="Areas\AdminPanel\Views\Category\List.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Shared\Partial\_BreadCrumb.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Shared\Partial\_ContentHeader.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Category\Edit.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Category\Index.cshtml" />
