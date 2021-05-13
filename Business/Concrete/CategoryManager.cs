@@ -2,6 +2,7 @@
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
+using Entities.Concrete.Dtos;
 using System;
 using System.Collections.Generic;
 
@@ -39,6 +40,16 @@ namespace Business.Concrete
         public void Update(Category category)
         {
             _categoryDal.Update(category);
+        }
+
+        public List<Category> GetAll(bool status)
+        {
+            return _categoryDal.GetAll(x => x.Status == status);
+        }
+
+        public HeadingCategoryDto GetMaxHeadingCountOfCategory()
+        {
+            return _categoryDal.GetMaxHeadingCountOfCategory();
         }
     }
 }

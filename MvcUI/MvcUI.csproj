@@ -98,6 +98,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\AdminPanel\Views\Statistics\İstatistikler.PNG" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
     <Content Include="wwwroot\css\adminlte.css" />
@@ -1989,6 +1990,7 @@
     <Compile Include="Areas\AdminPanel\AdminPanelAreaRegistration.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\CategoryController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\DashboardController.cs" />
+    <Compile Include="Areas\AdminPanel\Controllers\StatisticsController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -2007,6 +2009,8 @@
     <Content Include="Areas\AdminPanel\Views\Shared\Partial\_BreadCrumb.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Shared\Partial\_ContentHeader.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Category\Edit.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Statistics\Index.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Shared\Partial\_Footer.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Category\Index.cshtml" />

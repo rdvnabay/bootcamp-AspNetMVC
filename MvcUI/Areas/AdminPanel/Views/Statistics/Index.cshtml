@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    @Html.Partial("Partial/_ContentHeader")
+    <!-- /.content-header -->
+    <section class="content">
+        <div class="container-fluid">
+            <!-- Small boxes (Stat box) -->
+            <div class="row">
+                <div class="col-lg-3 col-6">
+                    <!-- small box -->
+                    <div class="small-box bg-info">
+                        <div class="inner">
+                            <h3>@ViewBag.ToplamKategoriSayisi</h3>
+
+                            <p>Toplam Kategori Sayısı</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ./col -->
+                <div class="col-lg-3 col-6">
+                    <!-- small box -->
+                    <div class="small-box bg-success">
+                        <div class="inner">
+                            <h3>@ViewBag.YazilimKategorisindekiBaslikSayisi</h3>
+
+                            <p>Yazılım Kategorisine Ait İçerik Sayısı</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ./col -->
+                <div class="col-lg-3 col-6">
+                    <!-- small box -->
+                    <div class="small-box bg-warning">
+                        <div class="inner">
+                            <h3>@ViewBag.YazarAdindaAHarfiOlanYazarSayisi</h3>
+
+                            <p>Yazar Adında 'A' Harfi Olan Yazar Sayısı</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ./col -->
+                <div class="col-lg-3 col-6">
+                    <!-- small box -->
+                    <div class="small-box bg-danger">
+                        <div class="inner">
+                            <h3>@ViewBag.EnFazlaBasligaSahipKategoriAdi</h3>
+
+                            <p>En Fazla Başlığa Sahip Kategori Adı</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ./col -->
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-6">
+                    <!-- small box -->
+                    <div class="small-box bg-info">
+                        <div class="inner">
+                            <h3>@ViewBag.KategoriTrueVeFalseArasındakiFark</h3>
+
+                            <p>Kategori Durumu (True - False) </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </section>
+</div>

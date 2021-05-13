@@ -1,4 +1,5 @@
 ﻿using Entities.Concrete;
+using Entities.Concrete.Dtos;
 using System.Collections.Generic;
 
 namespace Business.Abstract
@@ -7,6 +8,8 @@ namespace Business.Abstract
     {
         Category GetById(int categoryId);
         List<Category> GetAll();
+        List<Category> GetAll(bool status);
+        HeadingCategoryDto GetMaxHeadingCountOfCategory();
         void Add(Category category);
         void Delete(Category category);
         void Update(Category category);
