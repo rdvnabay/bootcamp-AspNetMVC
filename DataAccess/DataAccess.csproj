@@ -65,10 +65,18 @@
     <Compile Include="Concrete\EntityFramework\EfHeadingDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfWriterDal.cs" />
     <Compile Include="Concrete\InMemory\TestData.cs" />
+    <Compile Include="Migrations\202105141525599_addedColumnAboutToWriterTable.cs" />
+    <Compile Include="Migrations\202105141525599_addedColumnAboutToWriterTable.designer.cs">
+      <DependentUpon>202105141525599_addedColumnAboutToWriterTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202105141525599_addedColumnAboutToWriterTable.resx">
+      <DependentUpon>202105141525599_addedColumnAboutToWriterTable.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
