@@ -15,7 +15,7 @@ namespace MvcUI.Areas.AdminPanel.Controllers
             ViewBag.ToplamKategoriSayisi = categoryManager.GetAll().Count;
 
             //Görev-2
-            ViewBag.YazilimKategorisindekiBaslikSayisi = headingManager.GetAll(3).Count;
+            ViewBag.YazilimKategorisindekiBaslikSayisi = headingManager.GetAllById(3).Count;
             
             //Görev-3
             ViewBag.YazarAdindaAHarfiOlanYazarSayisi = writerManager.GetAllBYWriterFirstName("a").Count;

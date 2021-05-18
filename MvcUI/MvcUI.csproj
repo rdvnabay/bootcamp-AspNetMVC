@@ -1990,6 +1990,7 @@
     <Compile Include="Areas\AdminPanel\AdminPanelAreaRegistration.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\CategoryController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\DashboardController.cs" />
+    <Compile Include="Areas\AdminPanel\Controllers\HeadingController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\StatisticsController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\WriterController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
@@ -2014,6 +2015,9 @@
     <Content Include="Areas\AdminPanel\Views\Shared\Partial\_Footer.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Writer\List.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Writer\Add.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Writer\Edit.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Heading\List.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Heading\Add.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Category\Index.cshtml" />

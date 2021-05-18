@@ -69,12 +69,19 @@
     <Compile Include="Migrations\202105141525599_addedColumnAboutToWriterTable.designer.cs">
       <DependentUpon>202105141525599_addedColumnAboutToWriterTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105182134094_addColumn-Title.cs" />
+    <Compile Include="Migrations\202105182134094_addColumn-Title.designer.cs">
+      <DependentUpon>202105182134094_addColumn-Title.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202105141525599_addedColumnAboutToWriterTable.resx">
       <DependentUpon>202105141525599_addedColumnAboutToWriterTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105182134094_addColumn-Title.resx">
+      <DependentUpon>202105182134094_addColumn-Title.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -11,6 +11,7 @@ namespace Business.Abstract
     {
         List<Writer> GetAll();
         List<Writer> GetAllBYWriterFirstName(string writerName);
+        Writer GetById(int id);
 
         void Add(Writer writer);
         void Update(Writer writer);

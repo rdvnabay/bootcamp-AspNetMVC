@@ -9,6 +9,11 @@ namespace Business.Abstract
 {
     public interface IHeadingService
     {
-        List<Heading> GetAll(int categoryId);
+        List<Heading> GetAll();
+        List<Heading> GetAllById(int categoryId);
+        Heading GetById(int headingId);
+        void Add(Heading heading);
+        void Delete(Heading heading);
+        void Update(Heading heading);
     }
 }

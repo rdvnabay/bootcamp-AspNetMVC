@@ -16,9 +16,35 @@ namespace Business.Concrete
         {
             _headingDal = headingDal;
         }
-        public List<Heading> GetAll(int categoryId)
+
+        public void Add(Heading heading)
+        {
+            _headingDal.Add(heading);
+        }
+
+        public void Delete(Heading heading)
+        {
+            _headingDal.Delete(heading);
+        }
+
+        public List<Heading> GetAll()
+        {
+            return _headingDal.GetAll();
+        }
+
+        public List<Heading> GetAllById(int categoryId)
         {
            return _headingDal.GetAll(x=>x.CategoryId== categoryId);
+        }
+
+        public Heading GetById(int headingId)
+        {
+            return _headingDal.Get(x => x.Id == headingId);
+        }
+
+        public void Update(Heading heading)
+        {
+            _headingDal.Update(heading);
         }
     }
 }

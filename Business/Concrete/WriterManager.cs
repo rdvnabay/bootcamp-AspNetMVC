@@ -41,5 +41,10 @@ namespace Business.Concrete
         {
             _writerDal.Update(writer);
         }
+
+        public Writer GetById(int id)
+        {
+            return _writerDal.Get(x=>x.Id==id);
+        }
     }
 }

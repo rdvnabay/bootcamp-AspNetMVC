@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Business.ValidationRules.FluentValidation
@@ -22,7 +23,15 @@ namespace Business.ValidationRules.FluentValidation
 
         private bool AboutInclueAlphaA(string arg)
         {
-            return arg.Contains("a");
+            try
+            {
+                Regex regex = new Regex(@"^(?=.*[a,A])");
+                return regex.IsMatch(arg);
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
     }
 }
