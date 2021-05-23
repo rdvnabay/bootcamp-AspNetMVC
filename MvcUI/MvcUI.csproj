@@ -1989,6 +1989,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\AdminPanel\AdminPanelAreaRegistration.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\CategoryController.cs" />
+    <Compile Include="Areas\AdminPanel\Controllers\ContentController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\DashboardController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\HeadingController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\StatisticsController.cs" />
@@ -2018,6 +2019,7 @@
     <Content Include="Areas\AdminPanel\Views\Writer\Edit.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Heading\List.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Heading\Add.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Content\ContentByHeading.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Category\Index.cshtml" />

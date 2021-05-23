@@ -36,6 +36,7 @@ namespace Entities.Concrete
         [StringLength(20)]
         public string Password { get; set; }
 
+        public bool Status { get; set; }
 
         [StringLength(50)]
         public string Title { get; set; }
