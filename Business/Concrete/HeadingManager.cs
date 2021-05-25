@@ -46,5 +46,11 @@ namespace Business.Concrete
         {
             _headingDal.Update(heading);
         }
+
+        public void ChangeStatus(Heading heading)
+        {
+            heading.Status = false;
+            _headingDal.Update(heading);
+        }
     }
 }

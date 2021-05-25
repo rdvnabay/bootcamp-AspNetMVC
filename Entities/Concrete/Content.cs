@@ -11,11 +11,13 @@ namespace Entities.Concrete
         public int HeadingId { get; set; }
         public int? WriterId { get; set; }
 
+      
+        public DateTime CreatedDate { get; set; }
+        public bool Status { get; set; }
+
         [StringLength(100)]
         public string Value { get; set; }
-        public DateTime CreatedDate { get; set; }
 
-   
         public Heading Heading { get; set; }
         public Writer Writer { get; set; }
     }

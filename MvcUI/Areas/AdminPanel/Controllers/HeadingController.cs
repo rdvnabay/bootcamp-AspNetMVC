@@ -1,6 +1,7 @@
 ﻿using Business.Concrete;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
+using MvcUI.Areas.AdminPanel.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,9 +44,48 @@ namespace MvcUI.Areas.AdminPanel.Controllers
             headingManager.Add(heading);
             return RedirectToAction("List");
         }
+
+        public ActionResult ChangeStatus(int id)
+        {
+            var heading = headingManager.GetById(id);
+            headingManager.ChangeStatus(heading);
+            return RedirectToAction("List");
+        }
+        public ActionResult Edit(int id)
+        {
+            List<SelectListItem> CategoryList = (from c in categoryManager.GetAll()
+                                                 select new SelectListItem
+                                                 {
+                                                     Text = c.Name,
+                                                     Value = c.Id.ToString()
+                                                 }).ToList();
+
+            ViewBag.CategoryList = CategoryList;
+            var model = headingManager.GetById(id);
+            return View(model);
+        }
+
         public ActionResult List()
         {
-            var model = headingManager.GetAll();
+            var statusColor = "";
+            var headings = headingManager.GetAll();
+            foreach (var heading in headings)
+            {
+                if (heading.Status)
+                {
+                    statusColor = "badge badge-success";
+                }
+                else
+                {
+                    statusColor = "badge badge-warning";
+                }
+            }
+
+            var model = new HeadingStatusModel
+            {
+                Headings = headings,
+                StatusColor=statusColor
+            };
             return View(model);
         }
     }

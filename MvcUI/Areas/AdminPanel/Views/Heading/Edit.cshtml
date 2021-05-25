@@ -1,0 +1,30 @@
+﻿@using Entities.Concrete
+@model Heading
+@{
+    Layout = "~/Areas/AdminPanel/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    @Html.Partial("Partial/_ContentHeader")
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <h2>Edit</h2>
+            <div class="row">
+
+                @using (Html.BeginForm("Edit", "Heading", FormMethod.Post))
+                {
+                    <div class="form-group">
+                        @Html.TextBoxFor(x => x.Name)
+                    </div>
+
+                    <div class="form-group">
+                        @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.CategoryList)
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+</div>    

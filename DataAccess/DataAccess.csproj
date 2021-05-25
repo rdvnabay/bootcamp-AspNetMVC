@@ -77,6 +77,10 @@
     <Compile Include="Migrations\202105230906171_addedColumn-writer-Status.designer.cs">
       <DependentUpon>202105230906171_addedColumn-writer-Status.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105251115192_addedColumn_Status.cs" />
+    <Compile Include="Migrations\202105251115192_addedColumn_Status.designer.cs">
+      <DependentUpon>202105251115192_addedColumn_Status.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -89,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105230906171_addedColumn-writer-Status.resx">
       <DependentUpon>202105230906171_addedColumn-writer-Status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105251115192_addedColumn_Status.resx">
+      <DependentUpon>202105251115192_addedColumn_Status.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

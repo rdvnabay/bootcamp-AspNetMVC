@@ -16,9 +16,13 @@ namespace Entities.Concrete
         public int CategoryId { get; set; }
         public int WriterId { get; set; }
 
+
+        public DateTime CreatedDate { get; set; }
+
         [StringLength(100)]
         public string Name { get; set; }
-        public DateTime CreatedDate { get; set; }
+        public bool Status { get; set; }
+     
 
 
         public Category Category { get; set; }

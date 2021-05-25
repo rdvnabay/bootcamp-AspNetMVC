@@ -1988,12 +1988,14 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\AdminPanel\AdminPanelAreaRegistration.cs" />
+    <Compile Include="Areas\AdminPanel\Controllers\AboutController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\CategoryController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\ContentController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\DashboardController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\HeadingController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\StatisticsController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\WriterController.cs" />
+    <Compile Include="Areas\AdminPanel\Models\HeadingStatusModel.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -2020,6 +2022,8 @@
     <Content Include="Areas\AdminPanel\Views\Heading\List.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Heading\Add.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Content\ContentByHeading.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Heading\Edit.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\About\Index.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Category\Index.cshtml" />
