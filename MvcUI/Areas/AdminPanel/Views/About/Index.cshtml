@@ -1,4 +1,5 @@
-﻿
+﻿@using Entities.Concrete
+@model List<About>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/AdminPanel/Views/Shared/_Layout.cshtml";
@@ -11,40 +12,31 @@
     <!-- Main content -->
     <div class="content">
         <div class="container-fluid">
-            <h2>Index</h2>
-            <button class="btn btn-info" data-toggle="modal" data-target="#addAboutModal">Hakkımızda Veri Girişi</button>
-            <div class="modal" id="addAboutModal">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h2 class="modal-title">
-                                Hakkımızda Kayıt Ekleme
-                            </h2>
-                        </div>
-                            <form method="post" action="#">
-                                <div class="modal-body">
-                                    <div class="form-group">
-                                        <label>Hakkımda Metin 1</label>
-                                        <input type="text" class="form-control" name="">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Hakkımda Metin 2</label>
-                                        <input type="text" class="form-control" name="">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Hakkımda Görsel 1</label>
-                                        <input type="text" class="form-control" name="">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Hakkımda Görsel 2</label>
-                                        <input type="text" class="form-control" name="">
-                                    </div>
-                                    <button class="btn btn-success">Kaydet</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+            <h2>Listeleme</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Hakkımızda</th>
+                        <th>Aktif Yap</th>
+                        <th>Pasif Yap</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var about in Model)
+                    {
+                    <tr>
+                        <td>@about.Id</td>
+                        <td>Başlık</td>
+                        <td><a href="" class="btn btn-success">Aktif Yap</a></td>
+                        <td><a href="" class="btn btn-danger">Pasif Yap</a></td>
+
+                    </tr>
+                    }
+                </tbody>
+            </table>
+          @Html.Action("PartialAdd", "About")
         </div>
     </div>
 </div>

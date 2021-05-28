@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -7,9 +8,14 @@ namespace Business.Concrete
 {
     public class AboutManager : IAboutService
     {
+        private IAboutDal _aboutDal;
+        public AboutManager(IAboutDal aboutDal)
+        {
+            _aboutDal = aboutDal;
+        }
         public void Add(About about)
         {
-            throw new NotImplementedException();
+            _aboutDal.Add(about);
         }
 
         public void Delete(About about)
@@ -19,7 +25,7 @@ namespace Business.Concrete
 
         public List<About> GetAll()
         {
-            throw new NotImplementedException();
+            return _aboutDal.GetAll();
         }
 
         public About GetById(int aboutId)

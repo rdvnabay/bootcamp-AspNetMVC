@@ -1990,6 +1990,7 @@
     <Compile Include="Areas\AdminPanel\AdminPanelAreaRegistration.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\AboutController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\CategoryController.cs" />
+    <Compile Include="Areas\AdminPanel\Controllers\ContactController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\ContentController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\DashboardController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\HeadingController.cs" />
@@ -2024,6 +2025,10 @@
     <Content Include="Areas\AdminPanel\Views\Content\ContentByHeading.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Heading\Edit.cshtml" />
     <Content Include="Areas\AdminPanel\Views\About\Index.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Contact\Index.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Contact\GetDetail.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Shared\Partial\_SidebarForMail.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\About\PartialAdd.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Category\Index.cshtml" />
