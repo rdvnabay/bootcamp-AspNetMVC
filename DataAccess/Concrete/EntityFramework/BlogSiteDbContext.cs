@@ -1,10 +1,5 @@
 ﻿using Entities.Concrete;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.IO;
-using System.Linq;
-using System.Text;
 
 namespace DataAccess.Concrete.EntityFramework
 {
@@ -15,6 +10,7 @@ namespace DataAccess.Concrete.EntityFramework
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Content> Contents { get; set; }
         public DbSet<Heading> Headings { get; set; }
+        public DbSet<Message> Messages { get; set; }
         public DbSet<Writer> Writers { get; set; }
     }
 }

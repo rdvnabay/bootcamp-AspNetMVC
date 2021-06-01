@@ -56,6 +56,7 @@
     <Compile Include="Abstract\IContactDal.cs" />
     <Compile Include="Abstract\IContentDal.cs" />
     <Compile Include="Abstract\IHeadingDal.cs" />
+    <Compile Include="Abstract\IMessageDal.cs" />
     <Compile Include="Abstract\IWriterDal.cs" />
     <Compile Include="Concrete\EntityFramework\BlogSiteDbContext.cs" />
     <Compile Include="Concrete\EntityFramework\EfAboutDal.cs" />
@@ -63,40 +64,11 @@
     <Compile Include="Concrete\EntityFramework\EfContactDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfContentDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfHeadingDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfMessageDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfWriterDal.cs" />
     <Compile Include="Concrete\InMemory\TestData.cs" />
-    <Compile Include="Migrations\202105141525599_addedColumnAboutToWriterTable.cs" />
-    <Compile Include="Migrations\202105141525599_addedColumnAboutToWriterTable.designer.cs">
-      <DependentUpon>202105141525599_addedColumnAboutToWriterTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105182134094_addColumn-Title.cs" />
-    <Compile Include="Migrations\202105182134094_addColumn-Title.designer.cs">
-      <DependentUpon>202105182134094_addColumn-Title.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105230906171_addedColumn-writer-Status.cs" />
-    <Compile Include="Migrations\202105230906171_addedColumn-writer-Status.designer.cs">
-      <DependentUpon>202105230906171_addedColumn-writer-Status.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105251115192_addedColumn_Status.cs" />
-    <Compile Include="Migrations\202105251115192_addedColumn_Status.designer.cs">
-      <DependentUpon>202105251115192_addedColumn_Status.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202105141525599_addedColumnAboutToWriterTable.resx">
-      <DependentUpon>202105141525599_addedColumnAboutToWriterTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105182134094_addColumn-Title.resx">
-      <DependentUpon>202105182134094_addColumn-Title.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105230906171_addedColumn-writer-Status.resx">
-      <DependentUpon>202105230906171_addedColumn-writer-Status.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105251115192_addedColumn_Status.resx">
-      <DependentUpon>202105251115192_addedColumn_Status.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

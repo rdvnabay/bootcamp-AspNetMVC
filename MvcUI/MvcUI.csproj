@@ -1994,6 +1994,7 @@
     <Compile Include="Areas\AdminPanel\Controllers\ContentController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\DashboardController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\HeadingController.cs" />
+    <Compile Include="Areas\AdminPanel\Controllers\MessageController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\StatisticsController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\WriterController.cs" />
     <Compile Include="Areas\AdminPanel\Models\HeadingStatusModel.cs" />
@@ -2029,6 +2030,9 @@
     <Content Include="Areas\AdminPanel\Views\Contact\GetDetail.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Shared\Partial\_SidebarForMail.cshtml" />
     <Content Include="Areas\AdminPanel\Views\About\PartialAdd.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Message\InBox.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Message\SendBox.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Message\CreateNewMessage.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Category\Index.cshtml" />
